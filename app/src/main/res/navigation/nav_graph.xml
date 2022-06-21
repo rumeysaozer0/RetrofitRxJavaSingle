@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nationFragment">
+
+    <fragment
+        android:id="@+id/nationFragment"
+        android:name="com.rumeysaozer.rxjavasingle.view.NationFragment"
+        android:label="fragment_nation"
+        tools:layout="@layout/fragment_nation" >
+        <action
+            android:id="@+id/action_nationFragment_to_nationDetailsFragment"
+            app:destination="@id/nationDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nationDetailsFragment"
+        android:name="com.rumeysaozer.rxjavasingle.view.NationDetailsFragment"
+        android:label="fragment_nation_details"
+        tools:layout="@layout/fragment_nation_details" >
+        <argument
+            android:name="nation"
+            app:argType="com.rumeysaozer.rxjavasingle.model.NationItem" />
+    </fragment>
+</navigation>
